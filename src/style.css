@@ -7,10 +7,11 @@
     font-family: 'segoe ui';
   }
   
+  /*############# Navbar ############*/
   .nav {
     height: 50px;
     width: 100%;
-    background-color: #4d4d4d;
+    background-color: #49868c;
     position: relative;
   }
   
@@ -21,7 +22,7 @@
   .nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 22px;
-    color: #fff;
+    color: #d9b166;
     padding: 10px 10px 10px 10px;
   }
   
@@ -39,7 +40,7 @@
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
-    color: #efefef;
+    color: #d9b166;
   }
   
   .nav > .nav-links > a:hover {
@@ -70,13 +71,13 @@
       display: block;
       width: 25px;
       height: 10px;
-      border-top: 2px solid #eee;
+      border-top: 2px solid #d9b166;
     }
     .nav > .nav-links {
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #333;
+      background-color: #a0d9d9;
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
@@ -94,4 +95,9 @@
       height: calc(100vh - 50px);
       overflow-y: auto;
     }
+  }
+
+  /*############ Contact me ##############*/
+  label, input {
+    display: block;
   }
