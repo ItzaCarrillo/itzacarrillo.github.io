@@ -4,38 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="staylesheet">
     <link rel=stylesheet href="style.css"/>
     <title>ItzaPortfolio</title>
-    <script src="about.js"></script>
-    <script src="contact.js"></script>
-    <script src="home.js"></script>
+    
 </head>
 <body>
-    <nav class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <div class="nav-title">
-              Itza <!--logo img here-->
-            </div>
-        </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
-    
-          <div class="nav-links">
-              <a class="nav-link" href="#" onclick="onNavigate('/'); return true;">home</a>
-              <a class="nav-link" href="#" onclick="onNavigate('/contact'); return false;">contact</a>
-              <a class="nav-link" href="#" onclick="onNavigate('/projects'); return false;">projects</a>
-              <a href="https://www.linkedin.com/in/itza-carrillo/" >LinkedIn</a>
-              <a href="https://github.com/ItzaCarrillo" >github</a>   
-          </div>
-    </nav>
 
-    <div id="root"></div>
-    <script src="main.js"></script>
+      <!-- Tabs -->
+  <nav class="hamnav">
+      <div class="logo">
+          <h1>Me Logo</h1>
+      </div>
+
+      <!--Hamburguer menu-->
+      <label for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger"/> 
+
+      <!--items menu-->
+      <div class="hamitems" id="mainListDiv">
+        <a href="#home" class="active1">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/itza-carrillo/">linkedin</a>
+        <a href="https://github.com/ItzaCarrillo">github</a>
+      </div>
+  </nav>
+
+  <section class="home"></section>
+
+     <!-- Tab content -->
+    <div class="tab-content">
+      <div class="tab-pane active1" id="home">
+        <p>poner avatar</p>
+        <h1>Front-End Developer</h1>
+        <p>some text about me</p>
+      </div>
+
+      <div class="tab-pane active1" id="projects">
+        <h4>Projects</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Quidem iure quos cum, saepe reprehenderit minima quasi architecto numquam nesciunt dicta. Qui excepturi 
+          recusandae vitae maiores, inventore sequi? Rerum, odio omnis.</p> 
+      </div>
+
+      <div class="tab-pane active1" id="contact">
+        <h4>Contacts</h4>
+        <p>form para contacto</p> 
+      </div>
+    </div>
+  
+
+  <script src="main.js"></script>
 </body>
 </html>

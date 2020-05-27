@@ -1,26 +1,16 @@
-
-
-const routes = {
-    '/' : home,
-    '/contact' : contact,
-    '/projects' : projects,
-  };
-
-
-
-
- const rootDiv = document.getElementById('root');
-  rootDiv.innerHTML = routes[window.location.pathname];
+const menuClick = (event) => {
+  const activeTabs = document.querySelectorAll('.active1');
+  // deactivate existing active tab and panel
+  activeTabs.forEach(function(tab) {
+    tab.className = tab.className.replace('active1', '');
+  });
   
-  const onNavigate = (pathname) => {
-    window.history.pushState(
-      {},
-      pathname,
-      window.location.origin + pathname
-    )
-    rootDiv.innerHTML = routes[pathname]
-  }
-  
-  window.onpopstate = () => {
-    rootDiv.innerHTML = routes[window.location.pathname]
-  }
+  // activate new tab and panel
+  event.target.parentElement.className += ' active1';
+  document.getElementById(event.target.href.split('#')[1]).className += ' active1';
+}
+
+const element = document.getElementById('mainListDiv');
+
+element.addEventListener('click', menuClick);
+
